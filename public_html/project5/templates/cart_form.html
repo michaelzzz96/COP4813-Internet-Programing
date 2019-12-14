@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<script type="text/javascript" src="script.js"></script>
+	<!----Give page a descriptive title-->
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" href="../css/site.css">
+	
+</head>
+
+
+
+<body class="movieBackround" >
+
+<!---myMovie Xpress in some fasion-->
+<h1>myMovies Xpress!</h1>
+
+
+<?php if ( !$forEmail ) 
+{ 
+	?>
+	
+	<b>Welcome, 
+		
+		<?= $_SESSION['displayName'] ?> 
+
+		<a onclick="confirmLogout()"  class ="messageLogoutMessage"> (logout)</a><br>
+
+
+		</a>
+	</b>
+	<br />
+	
+	<?php
+ } 
+	
+	?>
+
+<?php if ($movie_counter !== 0) 
+{ 
+
+	?>
+	<b>
+		<?= 
+		 
+		$movie_counter 
+		 
+		 ?>
+
+		 movies in your shopping cart.
+
+	</b>
+		 <br>
+	
+		 <?php
+
+} 
+
+ else 
+
+ { 
+	?>
+	
+	echo "<p  class ="messageLogoutMessage">Add some Movies to Your Cart</p>";
+
+<?php 
+	
+} 
+	
+?>
+
+<br>
+
+<label for='select_order'>Select movie order:
+
+</label>
+
+<select id='select_order' onchange='changeMovieDisplay()'>
+	
+		<option value="0">Movie Title</option>
+		<option value="1">Runtime (shortest -> longest)</option>
+		<option value="2">Runtime (longest -> shortest)</option>
+		<option value="3">Year (old -> new)</option>
+		<option value="4">Year (new -> old)</option>
+		
+</select>
+
+
+<br />
+
+<div id='shopping_cart'>
+	
+	<?= $array ?>
+
+</div>
+
+<br />
+
+<?php if ( !$forEmail )
+ {
+	  
+	?>
+
+	<button type="button"  class="buttonAdd" onClick="location.href = './search.php';">Add Movie</button>
+	<button type="button" class="buttonLog" name="checkout" onClick='confirmCheckout();'>Checkout</button>
+
+	<div id='modalWindow' class='modal'>
+			<div id='modalWindowContent' class='modal-content'>
+			</div>
+		</div>
+
+</div>
+<?php 
+} 
+
+
+
+
+?>
+</body>
+</html>

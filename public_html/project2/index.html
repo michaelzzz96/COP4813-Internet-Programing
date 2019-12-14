@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Payment Process Form</title>
+    <link rel="stylesheet" type="text/css"  href="../css/site.css"/>
+	<script  src="script.js">
+	</script>
+</head>
+
+<body onload="updateForms()" onSubmit="return false">
+
+<h2 class="Project2"> Enter Payment Information</h2>
+
+<form onSubmit="return validateForm();">
+
+
+
+<label class="containerDegree">
+<input type="radio" name="payment"   id="CreditCardInfo"  checked onClick="updateForm(this)"/>
+
+<img src="./images/AmEx.png" alt="American Express" width="40" height="40"></img>
+<img src="./images/Discover.png" alt="Discover" width="40" height="40"></img>
+<img src="./images/MasterCard.png" alt="Master Card" width="40" height="40"></img>
+<img src="./images/Visa.png" alt="Visa" width="40" height="40"></img>
+<span class="radioButton">
+</label>
+
+<label class="containerDegree">
+<input type="radio" name="payment"  id="PaypalInfo" onClick="updateForm(this)"/>
+
+<img src="./images/PayPal.png" alt="PayPal" width="48" height="38"></img>
+<span class="radioButton">
+</label>
+
+<h2>Payment Information</h2>
+
+<!---Payment Information Section------->
+<div id="paymentinfo"> </div>
+
+
+<button type="submit"><img src="./images/PayNow.png" title="Pay Now" alt="Pay Now" height="27" width="69"/></button>
+</form>
+<br>
+
+<a href="../index.html">ePortfolio</a>
+
+</body>
+</html>

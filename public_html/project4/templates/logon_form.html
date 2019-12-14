@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+            <title>Movie Order</title>
+            <link rel="stylesheet" href="../css/site.css">
+		</head>
+        <h1>myMovies Xpress!</h1>
+        <img src="./images/movie.jpg" alt="Movie" width="100" height="100"></img> 
+        <img src="./images/googles.jpg" alt="3-D Glasses" width="100" height="100"></img> 
+        <img src="./images/oscar.jpg" alt="Movie" width="100" height="100"></img> <br><br>
+	<body class="movieBackround" >
+
+	<?php 
+       
+        if (  displayLoginForm("")  != "" ) 
+        { 
+            echo "<p class='messageWarning'> $messageVar</p>";
+            echo displayLoginForm("") ;
+        }
+    ?>
+    
+	<form action="./logon.php" method="post">
+		Username: <input type="text" name="username" required><br><br>	
+        Password: <input type="password" name="password" required><br><br><br>
+        
+        <input type="reset" class="clear" value="Clear">
+
+
+        <input type="submit" class="submit"  value="Login">
+        
+    </form><br><br>
+    
+	<a href="../index.html">ePortfolio</a>
+	
+
+	</body>
+	</html>
+

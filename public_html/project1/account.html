@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create an Account</title>
+		<!--  Link the css-->
+		<link rel="stylesheet" type="text/css" href="../css/site.css">
+</head>
+																										
+<body>
+
+<!-- Form the instuctor gave-->
+<form action="https://unfinishedbusiness.app/alert.php" method="post">
+
+<!--  Input for the form labels via.-->
+
+
+
+<label for="FirstName">First Name:</label>
+<input type="text" name="FirstName"><br><br>
+
+<label for="LastName">Last Name:</label>
+<input type="text" name="LastName"><br><br>
+
+<label for="Email">Email Address:</label>
+<input type="text" name="Email"><br><br>
+
+<label for="Password">Password:</label>
+<input type="password" name="Password"><br><br>
+
+<label for="ConfrimPassword">Confirm Password:</label>
+<input type="password" name="ConfrimPassword"><br><br>
+
+<label for="BirthDate">Birth Date:</label>
+<input type="date" name="BirthDate" value="2015-10-21"  min="1970-01-01" max="2020-12-31"><br><br><br>
+
+<!--  Input for the form labels via.-->
+
+
+Degree Track:<br><br>
+
+<!--  Input from the degree radiobutton from W3-->
+<label class="containerDegree">
+						<a href="https://www.unf.edu/ccec/computing/Computer_Science_Program.aspx" target="_blank">Computer Science</a>
+						<input type="radio" name="degreeTrack" value="compsci">
+						<span class="radioButton">
+					</label>
+					<label class="containerDegree">
+						<a href="https://www.unf.edu/ccec/computing/Information_Science_Program.aspx" target="_blank">Information Science</a>
+						<input type="radio" name="degreeTrack" value="infosci">
+						<span class="radioButton">
+					</label>					
+					<label class="containerDegree">
+						<a href="https://www.unf.edu/ccec/computing/Information_Systems_Program.aspx" target="_blank">Information Systems</a>
+						<input type="radio" name="degreeTrack" value="infosys">
+						<span class="radioButton">
+					</label>					<label class="containerDegree">
+						<a href="https://www.unf.edu/ccec/computing/Information_Technology_Program.aspx" target="_blank">Information Technology  </a>
+						<input type="radio" name="degreeTrack" value="infotech">
+						<span class="radioButton">
+					</label>
+
+
+ </br>Programming Language Experience:<br><br>
+
+
+<!-- Added a table to organize the language checkbox using css. Input from the language checkbox from W3-->
+<table id="Account">
+  
+  <tr>
+  <td>
+     <label class="containerLanguages">
+								<a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a> <br>
+								<input type="checkbox" name="ProgramC" value="C">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+	
+	<td>
+	<label class="containerLanguages">
+								<a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">PHP</a>
+								<input type="checkbox" name="ProgramPHP" value="PHP">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+ 
+  </tr>
+  
+   <tr class>
+  <td>
+	<label class="containerLanguages">
+								<a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a>
+								<input type="checkbox" name="ProgramC#" value="C#">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+	
+	<td>
+	<label class="containerLanguages">
+								<a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>
+								<input type="checkbox" name="ProgramPython" value="Python">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+ 
+  </tr>
+  
+   <tr>
+  <td>
+	<label class="containerLanguages">
+								<a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a>
+								<input type="checkbox" name="ProgramJava" value="Java">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+	
+	<td>
+	<label class="containerLanguages">
+								<a href="https://en.wikipedia.org/wiki/Visual_Basic" target="_blank">Visual Basic</a>
+								<input type="checkbox" name="ProgramVisualBasic" value="VisualBasic">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+ 
+  </tr>
+  
+  <td>
+	<label class="containerLanguages">
+								<a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+								<input type="checkbox" name="ProgramJavaScript" value="JavaScript">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+	
+	<td>
+	<label class="containerLanguages">
+								Other
+								<input type="checkbox" name="OtherProgram" value="Other">
+								<span class="checkmark"></span>
+							</label>
+ </td>
+ 
+  </tr>
+  
+  
+</table>
+
+<!-- Added a table to organize the language checkbox using css. Input from the language checkbox from W3-->
+
+
+<br>
+
+<!-- Added Buttons-->
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+
+<!-- Added info for the form that the instructor gave-->
+	<input type="hidden" name="username" value="294077619" />
+	<input type="hidden" name="to_email_address" value="n00929403@unf.edu" />
+	<input type="hidden" name="to_display_name" value="Michael Zulfekar" />
+
+</form>
+<!-- Link to my other pages-->
+<br>
+<a href="index.html">Personal</a>
+<br>
+<a href="../index.html">ePortfolio</a>
+
+</body>
+
+</html>

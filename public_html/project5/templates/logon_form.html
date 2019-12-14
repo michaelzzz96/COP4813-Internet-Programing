@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<script type="text/javascript" src="script.js"></script>
+	<!----Give page a descriptive title-->
+	<title>Movie Shopping Cart Page</title>
+	<link rel="stylesheet" href="../css/site.css">
+	
+</head>
+
+<!----Display the reset password using HTML and PHP-->
+<body class="movieBackround" >
+
+<!---myMovie Xpress in some fasion-->
+<h1>myMovies Xpress!</h1>
+
+<!---Provide directions to the user-->
+<p>
+    Enter your username and password <br>
+
+</p>
+
+<!---Determine if the message variable contains a value-->
+<?php if ($message != "") { ?>
+    <h2><?php echo $message; ?></h2>
+<?php } ?>
+
+<!---Create a form that includes to the user-->	
+<form id="login" action="./logon.php" method="post">
+	
+	<!---One text field-->	
+	<label>Username: <input type="text" name="username" required></label><br /><br>	
+	
+	<!---One password field-->	
+	<label>Password: <input type="password" name="password" required></label><br /><br>
+
+	<!---Two buttons-->
+	<button class="buttonClear" type="reset" value="Reset">Clear</button>
+	<button class="buttonAdd" name="Login" value="Login">Login</button>
+
+	<!---One hidden field-->
+	<input type="hidden" name="action" value="login">	
+
+	<!---Two hyperlinks -->
+	<br><br><a href="./logon.php?form=create">Create Account</a> <!---Create Account -->
+	<a href="./logon.php?form=forgot">Forgot Password</a> <!---Forgot Password-->
+
+</form>
+
+<br>
+<!---One hyperlink-->
+<a href="../index.html">ePortfolio</a>
+</body>
+</html>
+

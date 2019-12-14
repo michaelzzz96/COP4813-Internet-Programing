@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<script type="text/javascript" src="script.js"></script>
+	<!----Give page a descriptive title-->
+	<title>Reset Form Page</title>
+	<link rel="stylesheet" href="../css/site.css">
+	
+</head>
+
+<!----Display the reset password using HTML and PHP-->
+<body class="movieBackround" >
+
+<!---myMovie Xpress in some fasion-->
+<h1>myMovies Xpress!</h1>
+    
+    <!---Create the form-->
+	<form id="forgot" action="./logon.php" onsubmit="return validateResetPasswordForm();" method="post">
+    
+     <!---Two password fields-->
+    <label>New Password:<input type="password" name="password" id="password" required></label><br ><br >
+	<label>Confirm Password:</p><input type="password" name="cpassword" id="cpassword" required></label><br ><br />
+    
+    <!---Three buttons-->
+	<input type="button" onClick="confirmCancel(forgot);" value="Cancel">
+	<input type="reset" value="Clear">
+    <input type="submit" value="Reset Password">
+   
+	
+
+    <!---Two hidden fields-->
+    <input type="hidden" name="action" value="reset">
+    <input type="hidden" name="user_id" value="<?= $userId ?>">
+
+    
+</body>
+
+</html>

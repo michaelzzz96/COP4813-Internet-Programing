@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	<script type="text/javascript" src="script.js"></script>
+	<!----Give page a descriptive title-->
+	<title>Create Form Page</title>
+	<link rel="stylesheet" href="../css/site.css">
+	
+</head>
+
+<body class="movieBackround" >
+
+<!---myMovie Xpress in some fasion-->
+<h1>myMovies Xpress!</h1>
+
+<!---Provide directions to the user-->
+<p>Please enter your credentials. 
+    This include your  name, email, username and password.</p>
+
+<!---Create a form that includes to the user-->	
+<form id="create" action="./logon.php" onsubmit="return validateCreateAccountForm();" method="post">
+
+
+<!--Four text field -->	
+<label>Display Name: <input type="text" name="displayName" id="displayName" required></label><br /><br />
+
+<label>Email Address: <input type="text" name="emailAddress" id="emailAddress"  required></label><br /><br />
+
+<label>Confirm Email Address: <input type="text" name="cemailAddress" id="cemailAddress" required></label><br /><br />
+
+<label>Username: <input type="text" name="username" id="username" required></label><br /><br />
+
+
+<!--Two password field -->	
+<label>Password: <input type="password" name="password" id="password" required></label><br /><br />
+
+<label>Confirm Password: <input type="password" name="cpassword" id="cpassword" required></label><br /><br />
+
+<br />
+
+<!--Three buttons -->	
+<button class="buttonCancel" name="Cancel" onClick="javascript:confirmCancel(create);">Cancel</button>
+<button class="buttonClear" type="reset" value="Reset">Clear</button>
+<button class="buttonAdd" name="submit" value="Submit">Submit</button>
+
+<!--One hidden field -->	
+<input type="hidden" name="action" value="create">
+
+</body>
+
+</form>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Movie Search Form</title>
+
+		 <script type="text/javascript" src="script.js"></script>
+		 <link rel="stylesheet" href="../css/site.css">
+	</head>
+
+
+	<p><b>Welcome, 
+
+	<?= $_SESSION["display_name"];?> 
+	
+	<a href="#" onclick="confirmLogout()"   style='color:blue;'>(logout)</a><p>
+
+</b>
+
+<body class="movieBackround" >
+
+
+<h1>myMovies Xpress!</h1>
+
+<p>Search for something!</p>
+
+
+<form action="./search.php" method="post" >
+
+<p><label>Keyword to Search:  </label>
+<input name="searchString" type="text"  placeholder="Type a movie..." required> </p>
+<br>
+
+
+<button class="buttonCancel" onClick="javascript:window.location.href='./index.php'">Cancel</button>
+<button class="buttonClear" value="Clear" type="reset" > Clear </button>
+<button class="buttonAdd" value="Search" type="submit" > Search</button>
+
+</form>
+</body>
+</html>

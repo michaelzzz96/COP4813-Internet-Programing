@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<title>Statisical Calulator</title>
+	<link rel="stylesheet" type="text/css"  href="../css/site.css"/>
+	<script src="script.js"></script>
+</head>
+
+	
+<h2 class="Project3">Statistical Calculator</h2>
+	
+<body>
+
+	<form name="stats">
+		
+		<p>Enter 5 to 20 numbers (ranging in value between 0 and 100).<br>
+		Exactly one (1) space must separate each number.</p> 
+		
+		
+		<textarea id="stats"  rows="5" cols="60"></textarea>
+		
+		<br />	<br />
+		
+		
+		<input type="reset" value="Reset">
+		
+		<input type="submit" value="Submit" onclick="return performStatistics();">
+		<br>
+		<br />	
+		
+		
+		
+	<label for="Min">Min:</label>	
+	<input type="text" id="min" readonly></input><br>
+	
+	<label for="Max">Max:</label>	
+	<input type="text"  id="max" readonly></input><br>
+	
+	<label for="Sum">Sum:</label>	
+	<input type="text" id="sum" readonly></input><br>
+	
+	
+	<label for="Mean">Mean:</label>	
+	<input type="text"  id="mean" readonly></input><br>
+	
+	
+	<label for="Median">Median:</label>	
+	<input type="text"  id="median" readonly></input><br>
+	
+	
+	<label for="Mode">Mode:</label>	
+	<input type="text"  id="mode" readonly></input><br>
+	
+	<label for="Variance">Variance:</label>	
+	<input type="text"  id="variance" readonly></input><br>
+	
+	<label for="Std Dev">Std Dev:</label>	
+	<input type="text" id="std" readonly></input><br>   
+	
+	</form>
+
+	<br /><a href="../index.html">ePortfolio</a><br />
+
+</body>
+</html>

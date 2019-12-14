@@ -1,0 +1,105 @@
+<div class='modal-header'>
+	
+		<span class='close'>[Close]</span>
+		
+		<h2>
+			
+			<?php 
+			
+			
+			echo $array['Title']; 
+
+
+			?> 
+			
+			(
+				<?php 
+				
+				echo $array['Year'];
+			 
+				?>
+			 
+			 ) 
+
+			Rated 
+			
+			<?php
+			
+			echo $array['Rating']
+			
+			?>
+			
+			<?php
+			
+			echo 
+			
+			$array['Runtime']
+			
+			?>
+
+			 <br />
+			 
+			 <?php 
+			 
+			 
+			 echo $array['Genre']; 
+			 
+			 
+			 ?>
+
+			</h2>
+	</div>
+
+	<div class='modal-body'>
+
+		<p>Actors:
+			
+			<?php 
+			
+			
+			echo $array['Actors']; 
+			
+			
+			?>
+			<br />
+
+
+			Directed By: 
+			
+			<?php 
+			
+			echo $array['Director']; 
+			
+			
+			?>
+			
+			<br />Written By:
+
+			 <?php 
+			 
+			 echo $array['Writer'];
+			 
+			 
+			 ?>
+
+
+			</p>
+	</div>
+
+	<div class='modal-footer'>
+
+		<p>
+			
+			<?php echo $array == NULL 
+			
+			? 
+			
+			'Invalid Movie ID' : $array['Plot'] 
+			
+			
+			?>
+		
+		
+		</p>
+	</div>
+	

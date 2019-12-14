@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<script type="text/javascript" src="script.js"></script>
+	<title>Movie List</title>
+	<link rel="stylesheet" href="../css/site.css">
+	
+</head>
+
+<body class="movieBackround" >
+
+<table>
+
+<?php
+
+foreach($array as $movieID)
+ {
+
+	$movieData = getMovieData($movieID);
+	$movieID = $movieData['ID'];
+	$Imdb_Data = $movieData['IMDB_ID'];
+	$title = $movieData['Title'];
+	
+
+?>
+<tr>
+	<th>
+		<img src="<?= $movieData['Poster'] ?>" height='100'</th>
+	<th>
+		<a href="https://www.imdb.com/title/<?= $Imdb_Data ?>" target="_blank">
+		
+			<?= 
+			
+			$movieData['Title'] 
+			
+			?>
+
+		<?= " " 
+		?>
+		<?= "(" 
+		?>
+		<?= 
+		$movieData['Year'] 
+		?>
+		<?= 
+		")" 
+		?>
+
+	</a>
+</td>
+
+<?php if ( !$forEmail ) 
+{ 
+	?>
+	<th><a href="javascript:void(0);" onclick="displayMovieInformation('<?= $movieID ?>');">View More Info</a></th>	
+	<th><a href="javascript:void(0);" onclick="confirmRemove('<?= $title ?>','<?= $movieID ?>');">X</a></th>
+	<?php
+ }
+
+  ?>
+
+<?php 
+} 
+
+?>
+
+</tr>		
+</table>
+</body>
+</html>

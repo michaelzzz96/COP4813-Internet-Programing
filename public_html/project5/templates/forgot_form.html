@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<script type="text/javascript" src="script.js"></script>
+	<!----Give page a descriptive title-->
+	<title>Forgot Form Page</title>
+	<link rel="stylesheet" href="../css/site.css">
+	
+</head>
+
+<!----Display the forgot password form using HTML-->
+<body class="movieBackround" >
+
+<!---myMovie Xpress in some fasion-->
+<h1>myMovies Xpress!</h1>
+
+	<!---Provide directions to the user-->
+	<p>Please Enter your username</p>
+	
+	<!---Create a form that includes to the user-->	
+	<form id="forgot" action="./logon.php" method="post">
+	
+	<!---One text field-->	
+	<label>Username: <input type="text" name="username" required></label><br />
+		<br />	
+
+		<!--Three buttons -->	
+		<button class="buttonCancel" name="Cancel" onClick="javascript:confirmCancel(forgot);">Cancel</button>
+		<button class="buttonClear" type="reset" value="Reset">Clear</button>
+		<button class="buttonAdd" name="Submit" value="Submit">Submit</button>
+		
+
+
+		
+		<!--One hidden field -->	
+		<input type="hidden" name="action" value="forgot">
+
+	</form>
+
+</body>
+
+</html>

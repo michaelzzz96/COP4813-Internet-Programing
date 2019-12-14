@@ -1,0 +1,86 @@
+ <html>
+	<head>	
+		<title>Search Movie</title>
+
+		 <script type="text/javascript" src="script.js"></script>	
+		 <link rel="stylesheet" href="../css/site.css">
+
+		 
+	</head>
+	<body class="movieBackround" >
+
+
+
+<b>Welcome 
+	
+	<?= $_SESSION['display_name']; ?> 
+	<a onclick="confirmLogout()"   style='color:blue;'>(logout)</a><br>
+
+</b>
+
+<h1>myMovies Xpress!</h1>
+
+<b><?= count($array) ?> Movies Found Based On Your Results.</b><br><br>
+
+<?php 
+
+$testValue = 0;
+if (count(array_filter($array)) !== testValue) 
+{ 
+	
+?>
+
+
+<table>
+	<tr>
+		<th><b>Poster</b></th>
+		<th><b>Title(year)</b></th>
+		<th><b>Add</b></th>
+	</tr>
+
+	<?php 
+	
+	foreach($array as $movie) 
+	
+	{
+		
+	?>
+
+	<tr>		
+		<td><img src="
+			
+			<?= $movie["Poster"] ?>" 
+			
+			height="100">
+		
+		</td>
+		<td>
+			<a href="https://www.imdb.com/title/
+			<?= $movie["imdbID"]; 
+			?>" target="_blank">
+			<?= $movie["Title"]; ?>
+			<?= ($movie['Year']) ?>
+
+		<td><a href="javascript:addMovie('
+			<?= $movie["imdbID"] ?>');
+			" onclick="addMovie('
+			<?=$movie["imdbID"] ?>');
+			">
+			+</a></td>	
+	</tr>
+	<?php 
+} 
+
+?>
+</table>
+
+<?php 
+} 
+
+?>
+	<br>
+	<button value="Clear" class="buttonClear" onClick="javascript:window.location.href='./index.php'">Cancel</button>
+	<br>
+</body>
+</html>
+

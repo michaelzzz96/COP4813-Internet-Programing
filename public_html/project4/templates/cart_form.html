@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Shopping Cart</title>
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" href="../css/site.css">
+	</head>	
+
+	<body class="movieBackround" >
+
+<h1>myMovies Xpress!</h1>
+
+	<?php $listMovie = readMovieData();?>	
+
+	<b>Welcome, 
+		
+		<?php echo $_SESSION['display_name'];?> 
+		
+	
+		<a onclick="confirmLogout()"  class ="messageLogoutMessage"> (logout)</a><br>
+	
+	</b>
+
+	<br />
+	<b>
+		You have
+
+		<?= count($listMovie) ?> 
+		
+		movies in Your Shopping Cart 
+	
+	</b><br>
+	<br>
+<table>
+<tr>
+                <th><b>Poster</b></th>
+                <th><b>Title(year)</b></th>
+                <th><b>Remove</b></th>	
+</tr>
+
+<?php if (sizeof($listMovie) === 0) 
+
+{ 
+	echo "<p style='color:red;'>Add some Movies to Your Cart</p>";
+	
+} 
+	
+	foreach($listMovie as $movie)
+	
+	{
+			$movie = file_get_contents('http://www.omdbapi.com?apikey=b689c394&i=' . $movie . '&type=movie&r=json');
+			$array = json_decode($movie, true); 
+			
+		
+			
+	?>	 	
+
+
+	<tr>	
+		<td><img src=
+			
+			"<?= $array['Poster']; ?>" 
+			
+			height='100'></td>	
+
+		<td>
+			
+			<a href="https://www.imdb.com/title/
+			
+			<?= $array["imdbID"]; ?>
+			
+			target="_blank">
+			
+			<?=  $array['Title'];  ?>
+			
+			<?= ($year) ?>
+			
+			
+		
+		</a>
+		
+		</td>
+
+
+		<td>
+			
+			<a href="#"
+			
+			onclick="confirmRemove('<?= $title ?>',
+			
+			'<?= $id_string ?>');
+			
+			">
+			
+			X</a></td>
+	</tr>
+	
+	<?php 
+
+} 
+
+?>
+
+
+</table>
+<br>
+
+<button type="button"  class="buttonAdd" onclick="location.href = 'search.php';">Add Movie</button>
+<button type="button" class="buttonLog" name="checkout" onclick="confirmCheckout();">Checkout</button>
+
+
+</body>
+</html>

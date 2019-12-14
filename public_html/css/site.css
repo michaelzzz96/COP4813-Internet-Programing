@@ -1,0 +1,247 @@
+/* Given */
+div.main_header {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+span.main_header {
+    color: #ffffff;
+    font-size: 250%;
+    text-shadow: 0.05em 0.05em black;
+}
+
+span.body_text {
+    font-size: 150%;
+}
+/* Given */
+
+
+
+/*css to hover the hyperlinks used in the index page as per instructions  */
+body.index a:hover {
+    font-size: 150%;
+}
+
+
+/*css to change the color of my About Me header to a different color using hexadecimal  */
+.Bio {
+  color: #EA67DA;
+}
+
+/*css to change the color of my Hobbies and Interests header to a different color using hexadecimal   */
+.Specialties{
+	color: #CB3B3B;
+}
+
+/*Css to change the color of my Education header to a different color  */
+.Education{
+	color: gold;
+}
+
+/*Css to change the title of the credit card header  */
+.Project2{
+		color: blue;
+}
+
+.Project3{
+		color: red;
+}
+
+/*css to style the font of my degrees in bold */
+.Degree{
+	font-weight: bold;
+}
+
+/*Css to style the font of my Diplomas in Italic  */
+.Diploma{
+	font-style: italic;
+}
+
+/*css to style the font of my Certificates in Underline  */
+.Certificate{
+	 text-decoration: underline;
+}
+
+
+/*css  to style the table in the schudule page*/
+body.tableSchedule table, th, td {
+    text-align: center; 
+    vertical-align: middle;
+	border: 1px solid black;
+	border-collapse: collapse;
+	
+}
+/*css  to style every other row events in the schudule page*/
+body.tableSchedule  tr:nth-child(even) {
+    background-color: grey;
+}
+/*css  to style the schedule table in the schudule page*/
+body.tableSchedule  th {
+	background-color: blue;
+    color: orange;
+}
+
+/*cSS  to style the important events in the schudule page*/
+body.tableSchedule ol {
+    list-style-type: decimal;
+}
+
+/*css  to style the important events in the schudule page*/
+ol#ol-1{
+    list-style-type: upper-alpha;
+     padding-bottom: 0;
+}
+
+li#li-1{
+    margin-left:0;
+}
+
+li#li-2{
+    margin-left:0;
+    padding-bottom: 0;
+}
+
+
+
+
+/*css  to style the table schedule in the schudule page */
+body.tableSchedule table, th, td {
+    text-align: center; 
+    vertical-align: middle;
+	border: 1px solid black;
+	border-collapse: collapse;
+	
+}
+
+/*css for the Programming Languages used in the Accounts page */
+#Account td{
+text-align: left;
+padding :0px;
+text-align: center; 
+vertical-align: middle;
+border: 1px white;
+border-collapse: collapse
+}
+
+
+/*css for the custom Checkboxes used for the Programming Languages Checkbox in the Accounts page. Taken from W3*/
+
+.containerLanguages {
+    display: -webkit-flex; /* Safari */
+	flex-wrap: nowrap;
+    position: relative;
+    padding-left: 35px;
+	/*Added That  */
+	padding-right: 60px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.containerLanguages input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: grey;
+}
+
+.containerLanguages input:checked ~ .checkmark {
+    background-color: blue;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.containerLanguages input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.containerLanguages .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*css for the custom Checkboxes used for the Programming Languages Checkbox in the Accounts page. Taken from W3*/
+
+
+
+/*css for the custom Radio Button used for the Programming Languages Checkbox in the Accounts page. Taken from W3*/
+
+.containerDegree {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.containerDegree input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radioButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.containerDegree input:checked ~ .radioButton {
+    background-color: green;
+}
+
+.radioButton:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.containerDegree input:checked ~ .radioButton:after {
+    display: block;
+}
+
+.containerDegree .radioButton:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/*css for the custom Radio Button used for the Programming Languages Checkbox in the Accounts page. Taken from W3*/
+
